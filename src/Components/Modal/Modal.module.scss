@@ -1,0 +1,45 @@
+.popup {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+
+    &__container {
+        max-width: 500px;
+        border: 1px solid purple;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 30%;
+        animation: slide-in 0.4s ease-in;
+    
+        &__close {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: #fff;
+            border: none;
+            transition: .5s;
+    
+            &:hover {
+                color: red;
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+        }
+    
+        @keyframes slide-in {
+            0% {
+                transform: translateY(-40px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+    }   
+}
